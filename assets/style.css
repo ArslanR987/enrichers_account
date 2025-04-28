@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Mako&family=Oxygen:wght@300;400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+:root{
+	--primary-color: #081D41;
+	--input-color: #DFEAF2;
+	--oxygen-font: "Oxygen", sans-serif;
+}
+
+#overlay-panel{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background: rgba(8, 29, 65, 0.5);
+	z-index: -1;
+}
+
+/******************************/
+#my_header{
+	background: var(--primary-color);
+	height: 15vh;
+	position: relative;
+}
+#logo{
+	width: 100px;
+	height: 100px;
+	margin-left: 50px;
+}
+#logo img{
+	width: auto;
+	height: 90%;
+}
+@media screen and (max-width: 770px){
+	#my_header{
+		height: auto;
+	}
+	#logo{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-left: 0px;
+	}
+}
+
+
+/*******************************/
+/*SignIn Page */
+#open-acccount-content{
+	color: white;
+}
+#open-acccount-content p:first-of-type{
+	font-size: 48px;
+	font-weight: 700;
+}
+#open-acccount-content p:nth-of-type(2){
+	font-size: 40px;
+	font-weight: 400;
+}
+@media screen and (max-width: 480px){
+	#open-acccount-content p:first-of-type{
+		font-size: 24px;
+		font-weight: 700;
+	}
+		#open-acccount-content p:nth-of-type(2){
+		font-size: 22px;
+		font-weight: 400;
+	}
+}
+#bg-signIn-container{
+	width: 100%;
+	position: relative;
+	box-sizing: border-box;
+	padding: 10px 100px 100px 100px;
+}
+
+#bg-signIn-container img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	z-index: -999;
+}
+
+#my-signin-container{
+	border-radius: 25px;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.0);
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	overflow: hidden;
+}
+@media screen and (max-width:480px){
+	#bg-signIn-container{
+		padding: 0px 0px 0px 0px;
+	}
+	#my-signin-container{
+		border-radius: 0px 0px 10px 10px;
+	}
+}
+
+
+
+#my-signin-container-left,
+#my-signin-container-right{
+	width: 50%;
+	box-sizing: border-box;
+	padding: 30px 50px;
+	position: relative;
+}
+@media screen and (max-width: 480px){
+	#my-signin-container-left,
+	#my-signin-container-right{
+		width: 100%;
+		padding: 30px 50px;
+	}
+}
+
+#my-signin-container-left{
+	border-right: 1px solid white;
+}
+#my-signin-container-right{
+	background: rgba(8, 29, 65, 1.0);
+	border-left: 1px solid white;
+}
+@media screen and (max-width: 480px){
+	#my-signin-container-left{
+		border-right: 0px solid white;
+	}
+	#my-signin-container-right{
+		border-left: 0px solid white;
+	}
+}
+#my-signin-container-left p:first-of-type{
+	font-size: 32px;
+	font-weight: 600;
+	color: white;
+	text-align: left;
+	z-index: 99;
+}
+
+#my-signin-container-left-bg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	z-index: -2;
+}
+
+#my-signin-container-left-overlay{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	background: rgba(8, 29, 65, 0.9);
+	z-index: -1;
+}
+
+#my-signin-container-left #laptop-img{
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1.0));
+}
+
+
+#my-signin-container-right p:first-of-type{
+	font-size: 44px;
+	font-weight: 600;
+	color: white;
+}
+
+#my-signin-field-container{
+	margin-top: 20px;
+}
+
+#my-signin-field{
+	margin-top: 20px;
+}
+
+#my-signin-field label{
+	font-size: 15px;
+	font-weight: 500;
+	color: white;
+}
+
+#my-signin-field input[type="text"]{
+	width: 100%;
+	height: 45px;
+	box-sizing: border-box;
+	padding: 15px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	margin-top: 5px;
+	font-size: 14px;
+	background: var(--input-color);
+}
+
+#signin-forget-field{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+
+#signin-forget-field label{
+	color: white;
+}
+#signin-forget-field a{
+	color: white;
+	text-decoration: none;
+}
+
+ #sign-in-btn{
+	width: 100%;
+	height: 45px;
+	background: transparent;
+	border: 1.5px solid white;
+	color: white;
+	border-radius: 5px;
+	font-size: 18px;
+	transition: 0.5s all;
+}
+ #sign-in-btn:hover{
+ 	background: white;
+ 	color: black;
+ 	transition: 0.5s all;
+ }
+#my-signin-field hr{
+	color: white;
+	font-weight: 600;
+}
+
+#create-account-btn{
+	width: 100%;
+	background: #F0F0F0;
+	border-radius: 8px;
+	height: 52px;
+	border: none;
+	font-size: 14px;
+	transition: 0.5s all;
+}
+#create-account-btn:hover{
+	background: var(--primary-color);
+	border: 1px solid white;
+	transition: 0.5s all;
+	color: white;
+}
+#my-signin-field #copyRight-text{
+	font-size: 14px;
+	text-align: center;
+}
+
+/***********************************/
+/*Registration Page*/
+	.tab {
+      display: none;
+    }
+
+    .tab.active {
+      display: block;
+    }
+
+    .step-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .step {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      border-bottom: 2px solid #ccc;
+      font-weight: 500;
+      font-size: 16px;
+      color: #8BDBFF;
+    }
+
+    .step.active {
+      border-color: white;
+      color: white;
+    }
+
+
+#Registration-panel{
+	position: relative;
+	box-sizing: border-box;
+	padding: 10px 100px 100px 100px;
+}
+#Registration-panel img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	z-index: -1;
+}
+@media screen and (max-width: 480px){
+	#Registration-panel{
+		padding: 10px 10px 10px 10px;
+	}
+}
+#my-reg-container{
+	background: var(--primary-color);
+	width: 100%;
+	border-radius: 25px;
+	box-sizing: border-box;
+	padding: 50px;
+}
+.red-req{
+	color: red;
+/*	font-size: 22px;*/
+	margin-left: 5px;
+}
+#my-reg-container input{
+	background: #FAFAFA;
+}
+@media screen and (max-width: 480px){
+	#my-reg-container{	
+		padding: 10px;
+	}
+}
+
+#have-an-account-sec{
+	display: flex;
+	align-items: center;
+}
+#have-an-account-sec .form-check{
+	margin-left: 20px;
+}
+#have-an-account-sec p:first-of-type{
+	color: white;
+	font-size: 18px;
+}
+
+.tab label{
+	color: white;
+	font-weight: 600;
+}
+
+
+
+/*********************/
+.accordion-item{
+	margin-top: 10px;
+}
+
+.accordion-item .accordion-body{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 40px;
+	font-family: var(--oxygen-font);
+	background: #C5ECFF;
+}
+
+.accordion-item .accordion-body ol li{
+	margin-top: 10px;
+}
+
+#term-and-cond-accordion{
+	height: 400px;
+	overflow: auto;
+}
+
+#term-and-cond-accordion thead{
+	border: 1ps solid black;
+}
+
+#do-and-dont-accordion tr td{
+	line-height: 25px;
+}
+
+#do-and-dont-accordion p{
+	margin-top: 10px;
+}
+
+#do-and-dont-accordion .table th{
+	width: 50%;
+}
+
+.table, th, td, tr{
+	border: 0.5px solid #000001;
+}
+
+.accordion-button{
+	font-weight: 400;
+	font-size: 20px;
+	background: #C5ECFF;
+	border: none;
+}
+
+#mail-privacy{
+	color: #3498db;
+	text-decoration: none;
+}
